@@ -8,6 +8,8 @@ from tensorflow.keras.layers import Dense
 # Load the dataset
 df = pd.read_csv('boston_housing.csv')  # Replace with your actual file path
 
+dataset.isnull().sum()
+dataset.fillna(dataset.mean(), inplace=True)
 # Separate features (X) and target (Y)
 X = df.drop('MEDV', axis=1)
 Y = df['MEDV']
