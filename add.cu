@@ -54,3 +54,10 @@ int main()
  cudaFreeHost(C);
  return 0;
 }
+
+
+!rm -rf /usr/local/cuda
+ !ln -s  /usr/local/cuda-12.5 /usr/local/cuda
+ !nvcc -arch=sm_75 add.cu -o add
+ !./add
+ 0 3 6 9 12 15 18 21 24 27
